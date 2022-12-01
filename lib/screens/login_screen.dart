@@ -1,23 +1,19 @@
-import 'package:docs_clone_flutter/colors.dart';
-import 'package:docs_clone_flutter/repository/auth.repository.dart';
-import 'package:docs_clone_flutter/screens/home_Screen.dart';
+import 'package:docs_clone_flutter/constant/colors.dart';
+import 'package:docs_clone_flutter/repository/auth_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:routemaster/routemaster.dart';
 
 class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});
 
   void signInWithGoogle(WidgetRef ref, BuildContext context) async {
     final sMessanger = ScaffoldMessenger.of(context);
-    final navigator = Navigator.of(context);
+    final navigator = Routemaster.of(context);
     final errorModel = await ref.read(authRepositoryProvider).signWithGoogle();
     if (errorModel.error == null) {
       ref.read(userProvider.notifier).update((state) => errorModel.data);
-      navigator.push(
-        MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
-        ),
-      );
+      navigator.replace('/');
     } else {
       sMessanger.showSnackBar(
         SnackBar(
@@ -34,8 +30,8 @@ class LoginScreen extends ConsumerWidget {
         child: ElevatedButton.icon(
           onPressed: () => signInWithGoogle(ref, context),
           icon: Image.asset(
-            'images/g-logo-2.png',
-            height: 20,
+            'assets/images/g-logo-2.png',
+            height: 10,
           ),
           label: const Text(
             'Sign in With Google',
