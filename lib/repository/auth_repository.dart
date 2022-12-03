@@ -1,13 +1,4 @@
-import 'dart:convert';
-//import 'dart:io';
-
-import 'package:docs_clone_flutter/constant/constants.dart';
-import 'package:docs_clone_flutter/models/error_Model.dart';
-import 'package:docs_clone_flutter/models/user_model.dart';
-import 'package:docs_clone_flutter/repository/local_storage_repostitory.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:http/http.dart';
+import 'package:docs_clone_flutter/constant/import.dart';
 
 final authRepositoryProvider = Provider(
   (ref) => AuthRepository(

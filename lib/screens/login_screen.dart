@@ -1,8 +1,4 @@
-import 'package:docs_clone_flutter/constant/colors.dart';
-import 'package:docs_clone_flutter/repository/auth_repository.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:routemaster/routemaster.dart';
+import 'package:docs_clone_flutter/constant/import.dart';
 
 class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});

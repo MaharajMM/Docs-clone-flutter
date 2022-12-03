@@ -1,10 +1,4 @@
-import 'package:docs_clone_flutter/repository/auth_repository.dart';
-import 'package:docs_clone_flutter/router.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:routemaster/routemaster.dart';
-
-import 'models/error_Model.dart';
+import 'package:docs_clone_flutter/constant/import.dart';
 
 void main() {
   runApp(
