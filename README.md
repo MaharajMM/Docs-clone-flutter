@@ -1,16 +1,21 @@
 # docs_clone_flutter
 
-A new Flutter project.
+A completely Responsive Google Docs Clone App- Works on Android, iOS & Web!
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Google Authentication
+- State Persistence
+- Creating new Documents
+- Viewing List of Documents
+- Updating title of Document
+- Link sharing
+- Auto saving
+- Collaborative Editing in Rich Text Editor
+- Sign Out
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Used
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Server: Nodejs, Express, MongoDB, Mongoose, SocketIO
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Client: Flutter, Riverpod
