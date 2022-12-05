@@ -1,8 +1,8 @@
 export 'dart:convert';
 
-export '../constant/constants.dart';
+export '../utilities/constants.dart';
 export 'package:flutter/material.dart';
-export 'package:docs_clone_flutter/constant/colors.dart';
+export 'package:docs_clone_flutter/utilities/colors.dart';
 export 'package:google_sign_in/google_sign_in.dart';
 
 //widgets

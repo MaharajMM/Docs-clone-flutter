@@ -1,4 +1,4 @@
-import 'package:docs_clone_flutter/constant/import.dart';
+import 'package:docs_clone_flutter/utilities/import.dart';
 
 class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});

@@ -1,4 +1,4 @@
-import 'package:docs_clone_flutter/constant/import.dart';
+import 'package:docs_clone_flutter/utilities/import.dart';
 import 'package:docs_clone_flutter/screens/document_screen.dart';
 
 final loggedOutRout = RouteMap(routes: {

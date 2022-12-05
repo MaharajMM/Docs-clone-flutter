@@ -1,4 +1,4 @@
-import 'package:docs_clone_flutter/constant/import.dart';
+import 'package:docs_clone_flutter/utilities/import.dart';
 import 'package:socket_io_client/socket_io_client.dart' as io;
 
 class SocketClient {

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:docs_clone_flutter/constant/import.dart';
+import 'package:docs_clone_flutter/utilities/import.dart';
 import 'package:docs_clone_flutter/repository/socket_repository.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_quill/flutter_quill.dart' as quill;

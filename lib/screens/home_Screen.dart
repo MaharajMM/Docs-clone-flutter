@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
-import 'package:docs_clone_flutter/constant/import.dart';
+import 'package:docs_clone_flutter/utilities/import.dart';
+import 'package:docs_clone_flutter/utilities/size_config.dart';
 
 //import 'package:docs_clone_flutter/constant/colors.dart';
 //import 'package:docs_clone_flutter/repository/auth_repository.dart';
@@ -39,6 +40,7 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    SizeConfig().init(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kBlue,
@@ -48,8 +50,11 @@ class HomeScreen extends ConsumerWidget {
             onPressed: () => createDocument(context, ref),
             icon: const Icon(
               Icons.add,
-              color: kBlack,
+              color: kWhite,
             ),
+          ),
+          SizedBox(
+            width: getWidth(5),
           ),
           IconButton(
             onPressed: () => signOut(ref),
@@ -69,32 +74,36 @@ class HomeScreen extends ConsumerWidget {
             return const Loader();
           }
 
-          return Center(
-            child: Container(
-              width: 600,
-              margin: const EdgeInsets.only(top: 20),
-              child: ListView.builder(
-                itemCount: snapshot.data!.data.length,
-                itemBuilder: ((context, index) {
-                  DocumentModel document = snapshot.data!.data[index];
+          return Padding(
+            padding:
+                const EdgeInsets.only(left: 50.0, right: 50.0, bottom: 30.0),
+            child: Center(
+              child: Container(
+                width: getWidth(400),
+                margin: const EdgeInsets.only(top: 20),
+                child: ListView.builder(
+                  itemCount: snapshot.data!.data.length,
+                  itemBuilder: ((context, index) {
+                    DocumentModel document = snapshot.data!.data[index];
 
-                  return InkWell(
-                    onTap: () => navigateToDocument(context, document.id),
-                    child: SizedBox(
-                      height: 50,
-                      child: Card(
-                        child: Center(
-                          child: Text(
-                            document.title,
-                            style: const TextStyle(
-                              fontSize: 17,
+                    return InkWell(
+                      onTap: () => navigateToDocument(context, document.id),
+                      child: SizedBox(
+                        height: getHeight(50),
+                        child: Card(
+                          child: Center(
+                            child: Text(
+                              document.title,
+                              style: const TextStyle(
+                                fontSize: 17,
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  );
-                }),
+                    );
+                  }),
+                ),
               ),
             ),
           );
